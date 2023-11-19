@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&family=Nunito:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&display=swap" rel="stylesheet">
+    <link rel="icon"
+        href="https://play-lh.googleusercontent.com/TBRwjS_qfJCSj1m7zZB93FnpJM5fSpMA_wUlFDLxWAb45T9RmwBvQd5cWR5viJJOhkI">
+    <title>Netflix India - Watch TV Show and Drama</title>
+</head>
+
+
+<style>
+    * {
+        padding: 0%;
+        margin: 0%;
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
+
+    #container {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        background-color: black;
+    }
+
+    .seperation {
+        width: 100vw;
+        height: 8px;
+        background-color: rgb(49, 49, 49);
+    }
+
+    /* main */
+    .main {
+        position: relative;
+        width: 100vw;
+        height: 660px;
+        background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/a09bb938-2d90-42ae-986e-5a3e4abf9e77/8eb1e781-3494-4aa4-9405-268ca6473e4c/IN-en-20231113-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+        background-position: center center;
+        background-size: max(1200px, 100vw);
+        background-repeat: no-repeat;
+    }
+
+    /* black */
+    .black {
+        position: absolute;
+        top: 0px;
+        opacity: 0.69;
+        height: 660px;
+        width: 100%;
+        background-color: black;
+    }
+
+    /* ============================================================================================================= */
+
+    /* navbar */
+    .navbar {
+        max-width: 60vw;
+        justify-content: space-between;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        height: 100px;
+        flex-wrap: wrap;
+
+    }
+
+    .navbar svg {
+        height: 81px;
+        width: 157px;
+        position: relative;
+    }
+
+    .navbar button {
+        position: relative;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 15px;
+        border-radius: 5px;
+        transition: all 0.5s;
+        color: white;
+        cursor: pointer;
+        font-family: 'Noto Sans', sans-serif;
+        font-family: 'Nunito', sans-serif;
+        border: none;
+    }
+
+    .navbar-btn {
+        display: flex;
+        gap: 30px;
+
+    }
+
+    .nbtn1 {
+        background-color: transparent;
+    }
+
+    .nbtn1:hover {
+        background-color: rgba(34, 34, 34, 0.8);
+    }
+
+    .nbtn2 {
+        background-color: red;
+    }
+
+    .nbtn2:hover {
+        background-color: rgb(255, 108, 108);
+    }
+
+    /* ============================================================================================================= */
+
+    /* navbar text */
+
+    .nav-text {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin: auto;
+        width: 50vw;
+        color: white;
+        text-align: center;
+        gap: 20px;
+        margin-top: 100px;
+        line-height: 50px;
+    }
+
+    .nav-p1 {
+        font-size: 50px;
+        font-weight: 700;
+        font-family: 'Noto Sans', sans-serif;
+        font-family: 'Nunito', sans-serif;
+    }
+
+    .nav-p2 {
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .nav-p3 {
+        font-size: 23px;
+    }
+
+    /* ============================================================================================================= */
+
+    /* Navbar E-mail*/
+
+    .email {
+        display: flex;
+        position: relative;
+        gap: 10px;
+        margin: auto;
+    }
+
+    .email input {
+        padding: 15px;
+        background-color: rgba(54, 54, 54, 0.9);
+        border: none;
+        color: white;
+        border-radius: 5px;
+
+    }
+
+    .email button {
+        padding: 10px 20px 10px 20px;
+        border-radius: 5px;
+        background-color: red;
+        color: rgb(255, 255, 255);
+        border: none;
+        font-family: 'Noto Sans', sans-serif;
+        font-family: 'Nunito', sans-serif;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+
+    .email button:hover {
+        background-color: rgb(255, 108, 108);
+    }
+
+    /* ============================================================================================================== */
+
+    /* ENJOY 1 */
+
+    .enjoy {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+        height: fit-content;
+        max-width: 90vw;
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        text-align: center;
+        gap: 25px;
+        position: relative;
+    }
+
+    .enjoy-text {
+        margin-top: 40px;
+        max-width: 100%;
+        line-height: 45px;
+    }
+
+    .enjoy-text .p1 {
+        font-family: 'Noto Sans', sans-serif;
+        font-family: 'Nunito', sans-serif;
+        font-size: 45px;
+        font-weight: 900;
+    }
+
+    .enjoy-text .p2 {
+        font-size: 25px;
+        font-weight: 500px;
+        font-family: 'Noto Sans', sans-serif;
+        font-family: 'Nunito', sans-serif;
+    }
+
+    .enjoy-tv {
+        position: relative;
+    }
+
+    .enjoy-tv img {
+        height: 440px;
+        width: 555px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .enjoy-vedio {
+        position: absolute;
+        width: 455px;
+        top: 75px;
+        right: 30px;
+    }
+
+
+    /* ====================================================================================================== */
+
+    /* ENJOY 3 */
+
+    #enjoy-vedio3 {
+        position: absolute;
+        width: 360px;
+        top: 35px;
+        right: 100px;
+    }
+
+    /*==========================================================================================================*/
+
+    /* FAQ */
+
+    .faq {
+        display: flex;
+        justify-content: center;
+        max-width: 80vw;
+        margin: auto;
+        color: white;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    .f-data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .f-head {
+        font-size: 50px;
+        font-family: 'Lato', sans-serif;
+        margin-bottom: 10px;
+    }
+
+    .f-text {
+        padding: 25px;
+        width: 90%;
+        background-color: rgba(57, 57, 57, 0.8);
+        cursor: pointer;
+        transition: all 0.5s;
+        font-size: 20px;
+        font-family: 'Noto Sans', sans-serif;
+        font-family: 'Nunito', sans-serif;
+    }
+
+    .f-text:hover {
+        background-color: rgb(57, 57, 57);
+    }
+
+    .faq-fotter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+        margin-top: 25px;
+        font-size: 25px;
+        font-weight: bold;
+        font-family: 'DM Sans', sans-serif;
+    }
+
+    #faq-button input {
+        width: 300px;
+    }
+
+    /*==========================================================================================================*/
+
+    /* FOOTER */
+
+    .footer {
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    .f-container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        color: white;
+    }
+
+    .f-item {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 10px;
+
+    }
+
+    .f-item ul li {
+        list-style-type: none;
+        padding: 8px;
+        font-size: 18px;
+        transition: all 0.5s;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .f-item ul li:hover {
+        color: red;
+    }
+
+    /* =========================================================================================================  */
+    /* =========================================================================================================  */
+    /* ========================================================================================================== */
+
+    /*  MEDIA QUIRY */
+
+    @media (max-width:768px) {
+
+        body {
+            margin: 0%;
+            padding: 0%;
+            background-color: black;
+        }
+
+
+        .navbar {
+            max-width: 100vw;
+            justify-content: space-between;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            height: 100px;
+            flex-wrap: nowrap;
+            padding: 10px;
+            margin-bottom: 25px;
+
+        }
+
+        .navbar svg {
+            width: 5.5625rem;
+            height: 1.5rem;
+            position: relative;
+        }
+
+        .nav-text {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            width: 100vw;
+            color: white;
+            text-align: center;
+            gap: 10px;
+            margin-top: 40px;
+            padding: 5px;
+            flex-wrap: wrap;
+        }
+
+        .nav-p1 {
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        .nav-p2 {
+            font-size: 30px;
+            font-weight: 400;
+        }
+
+        .nav-p3 {
+            font-size: 23px;
+        }
+
+        /* ----------------------------------------------------------------------------------------------------- */
+
+        /* enjoy the tv */
+
+        .enjoy {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            height: fit-content;
+            max-width: 100vw;
+            padding: 10px;
+            margin: auto;
+            text-align: center;
+            gap: 25px;
+            position: relative;
+            flex-direction: column;
+        }
+
+        .enjoy-text {
+            max-width: 95%;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+        .enjoy-tv {
+            height: fit-content;
+        }
+
+        .enjoy-tv img {
+            height: 274px;
+            width: 366px;
+        }
+
+        .enjoy-vedio {
+            position: absolute;
+            ;
+            height: 150px;
+            width: 350px;
+            top: 55px;
+            right: 0px;
+        }
+
+        .enjoy-text .p1 {
+            font-family: 'Noto Sans', sans-serif;
+            font-family: 'Nunito', sans-serif;
+            font-size: 45px;
+            font-weight: 900;
+            flex-wrap: wrap;
+        }
+
+        /* ----------------------------------------------------------------------------------------------------- */
+
+        /* Enjoy 2 */
+        #enjoy2 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            height: fit-content;
+            max-width: 100vw;
+            padding: 10px;
+            margin: auto;
+            text-align: center;
+            gap: 25px;
+            position: relative;
+            flex-direction: column-reverse;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+
+        /* Enjoy 3 */
+        #enjoy-vedio3 {
+            position: absolute;
+            height: 135px;
+            width: 370px;
+            top: 14px;
+            right: 0px;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+
+
+        #faq-button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+
+        .f-item {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            margin-top: 10px;
+        }
+    }
+</style>
+
+
+
+
+<body>
+    <div id="container">
+        <div class="main">
+
+            <!-- black-box -->
+            <div class="black"></div>
+
+            <div class="navbar">
+
+                <!-- Netflix image -->
+                <svg viewBox="0 0 111 30" fill="red" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                    class="default-ltr-cache-1d568uk ev1dnif2">
+                    <g>
+                        <path
+                            d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z">
+                        </path>
+                    </g>
+                </svg>
+
+                <!-- button -->
+                <div class="navbar-btn">
+                    <button class="nbtn1">English</button>
+                    <button class="nbtn2">Sign In</button>
+                </div>
+
+            </div>
+
+            <!-- navbar text -->
+            <div class="nav-text">
+                <p class="nav-p1">Laughter. Tears. Thrills. Find it all on Netflix.</p>
+                <p class="nav-p2">Endless entertainment starts at just ₹ 149. Cancel anytime.</p>
+                <p class="nav-p3">Ready to watch? Enter your email to create or restart your membership.</p>
+
+
+                <!-- Navbar E-mail -->
+                <div class="email">
+                    <input type="text" placeholder="Email Address">
+                    <button>Get Started</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!--===================================================================================================== -->
+
+        <!-- seperation -->
+        <div class="seperation"></div>
+
+
+        <!-- Enjoy Your TV -->
+
+        <div class="enjoy">
+
+            <!-- enjoy text -->
+            <div class="enjoy-text">
+                <p class="p1">Enjoy on your TV</p>
+                <p class="p2">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+            </div>
+
+
+            <!-- enjoy vedio -->
+            <div class="enjoy-tv">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="">
+                <video class="enjoy-vedio" autoplay muted playinline loop>
+                    <source
+                        src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v">
+                </video>
+            </div>
+
+        </div>
+
+        <!--===================================================================================================== -->
+
+        <div class="seperation"></div>
+
+        <div class="enjoy" id="enjoy2">
+
+            <!-- enjoy vedio -->
+            <div class="enjoy-tv">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
+                    alt="">
+            </div>
+
+            <!-- enjoy text -->
+            <div class="enjoy-text">
+                <p class="p1">Download your shows to watch offline</p>
+                <p class="p2">Save your favourites easily and always have something to watch.</p>
+            </div>
+        </div>
+
+        <!--===================================================================================================== -->
+
+        <!-- seperation -->
+        <div class="seperation"></div>
+
+
+        <!-- Enjoy 3 -->
+
+        <div class="enjoy">
+
+            <!-- enjoy text -->
+            <div class="enjoy-text">
+                <p class="p1">Watch everywhere</p>
+                <p class="p2">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+            </div>
+
+
+            <!-- enjoy vedio -->
+            <div class="enjoy-tv">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png"
+                    alt="">
+                <video id="enjoy-vedio3" autoplay muted playinline loop>
+                    <source
+                        src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v">
+                </video>
+            </div>
+
+        </div>
+
+        <!--===================================================================================================== -->
+
+        <!-- seperation -->
+        <div class="seperation"></div>
+
+        <div class="enjoy" id="enjoy2">
+
+            <!-- enjoy vedio -->
+            <div class="enjoy-tv">
+                <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d"
+                    alt="">
+            </div>
+
+            <!-- enjoy text -->
+            <div class="enjoy-text">
+                <p class="p1">Create profiles for kids</p>
+                <p class="p2">Send children on adventures with their favourite characters in a space made just for
+                    them—free with your membership.</p>
+            </div>
+        </div>
+
+        <!--=================================================================================================== -->
+
+        <!-- seperation -->
+        <div class="seperation"></div>
+
+        <!-- FAQ -->
+        <div class="faq">
+            <div class="f-data">
+                <p class="f-head">Frequently Asked Questions</p>
+                <div class="f-text">What is Netflix</div>
+                <div class="f-text">How much does Netflix cost</div>
+                <div class="f-text">Where can I watch</div>
+                <div class="f-text">How do I cancle</div>
+                <div class="f-text">What Can I watch on Netflix</div>
+
+                <!-- FAQ fotter -->
+                <div class="faq-fotter">
+                    <p>Ready to watch? Enter your email to create or restart your membership.</p>
+                    <div class="email" id="faq-button">
+                        <input type="text" placeholder="Email Address">
+                        <button>Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--============================================================================================= -->
+
+        <!-- seperation -->
+        <div class="seperation"></div>
+
+        <div class="footer">
+            <div class="f-container">
+                <p>Questions? Call 000-800-919-1694</p>
+                <div class="f-item">
+                    <ul>
+                        <li>FAQ</li>
+                        <li>Investor</li>
+                        <li>Privacy</li>
+                        <li>Speed Test</li>
+                    </ul>
+                    <ul>
+                        <li>Help Center</li>
+                        <li>Jobs</li>
+                        <li>Cookies Preferences</li>
+                        <li>Legal Notice</li>
+                    </ul>
+                    <ul>
+                        <li>Amout</li>
+                        <li>Way to Watch</li>
+                        <li>Only on Netflex</li>
+                        <li>Corporate Information</li>
+                    </ul>
+                    <ul>
+                        <li>Media Center</li>
+                        <li>Terms Use</li>
+                        <li>Contact Us</li>
+                        <li>About Us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
